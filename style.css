@@ -171,6 +171,7 @@ h1{font-variation-settings:"wght" 400,"opsz" 144!important;transition:none;curso
 .about .sec{grid-column:1/-1}
 .about>div{grid-column:2}
 @media (max-width:760px){.about{grid-template-columns:1fr}.about>div{grid-column:1}}
+<<<<<<< HEAD
 
 @media (min-width:761px){
 .timeline ol::before{left:calc(9.5rem + 1.5rem - 1px)}
@@ -179,3 +180,5 @@ h1{font-variation-settings:"wght" 400,"opsz" 144!important;transition:none;curso
 }
 .timeline .y{font-size:1.15rem;white-space:nowrap;letter-spacing:0;padding-top:.25rem}
 .timeline li p+p{margin-top:.8rem}
+=======
+>>>>>>> 82175314a7f7f4a5ad0b4b13682e18b192fdd4bc
