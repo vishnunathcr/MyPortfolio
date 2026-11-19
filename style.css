@@ -148,7 +148,7 @@ html.has-cur,html.has-cur *{cursor:none!important}
 h1{font-variation-settings:"wght" 400,"opsz" 144!important;transition:none;cursor:default}
 .tank{display:inline-block;width:.8em;margin-left:.14em}
 .tank svg{display:block;width:100%;height:auto;overflow:visible}
-.missile{position:fixed;left:0;top:0;width:28px;height:12px;pointer-events:none;z-index:9998}
+.missile{position:fixed;left:0;top:0;width:52px;height:19px;pointer-events:none;z-index:9998}
 .missile svg{display:block;width:100%;height:100%}
 .boom{position:fixed;width:44px;height:44px;border:3px solid var(--pop);border-radius:50%;pointer-events:none;z-index:9998}
 .photo{width:clamp(6.5rem,11vw,8.5rem);margin:0 0 1.5rem;align-self:flex-start}
@@ -185,9 +185,6 @@ h1{font-variation-settings:"wght" 400,"opsz" 144!important;transition:none;curso
 html[data-theme="light"]{--bg:#fafaf7;--ink:#0c0c10;--dim:#5b5b66;--line:rgba(12,12,16,.2);--pop:#946a00;--pop-soft:rgba(148,106,0,.18);--panel:#edece6;--cursor:#0c0c10;color-scheme:light}
 body{transition:background-color .3s,color .3s}
 .cursor-dot{background:var(--cursor)}
-.tank [fill="#f3f1ff"],.missile [fill="#f3f1ff"]{fill:var(--ink)}
-.tank [fill="#000"]{fill:var(--bg)}
-.tank [fill="#ffd23f"],.missile [fill="#ffd23f"]{fill:var(--pop)}
 .theme-toggle{all:unset;box-sizing:border-box;cursor:pointer;margin-left:1.6rem;display:inline-flex;vertical-align:middle;width:52px;height:28px;border-radius:14px;border:1px solid var(--line);background:var(--panel);padding:2px}
 .theme-toggle:focus-visible{outline:3px solid var(--pop);outline-offset:3px}
 .tt-knob{width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;transform:translateX(24px);transition:transform .25s}
@@ -197,3 +194,5 @@ html[data-theme="light"] .tt-knob{transform:none}
 html[data-theme="light"] .tt-sun{display:block}
 html[data-theme="light"] .tt-moon{display:none}
 @media (max-width:480px){nav a,.theme-toggle{margin-left:.9rem}}
+.tank.flip svg{transform:scaleX(-1)}
+.boom{background:rgba(255,138,61,.25)}
