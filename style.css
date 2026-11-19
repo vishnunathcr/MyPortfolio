@@ -69,7 +69,7 @@ dd{margin:0;color:var(--ink)}
 .timeline ol::before{content:"";position:absolute;left:calc(6rem + 1.5rem - 1px);top:2rem;bottom:0;width:2px;background:linear-gradient(var(--line) 85%,transparent)}
 .timeline li{display:grid;grid-template-columns:6rem 1fr;column-gap:3rem;padding:1.3rem 0 1.6rem;position:relative}
 .timeline li::before{content:"";position:absolute;left:calc(6rem + 1.5rem - 8px);top:1.45rem;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--pop);z-index:1}
-.timeline li:first-child::before{background:var(--pop);box-shadow:0 0 0 6px rgba(255,210,63,.18)}
+.timeline li:first-child::before{background:var(--pop);box-shadow:0 0 0 6px var(--pop-soft)}
 .timeline .y{font:700 clamp(1.6rem,3.5vw,2.4rem)/1 var(--sans);letter-spacing:-.03em;color:var(--pop)}
 .timeline h3{margin:0;font:600 1.5rem/1.2 var(--sans);letter-spacing:-.02em}
 .timeline .p{display:block;font:500 .95rem var(--sans);color:var(--dim);margin:.25rem 0 .6rem}
@@ -179,3 +179,21 @@ h1{font-variation-settings:"wght" 400,"opsz" 144!important;transition:none;curso
 }
 .timeline .y{font-size:1.15rem;white-space:nowrap;letter-spacing:0;padding-top:.25rem}
 .timeline li p+p{margin-top:.8rem}
+
+/* Day / night theme */
+:root{--pop-soft:rgba(255,210,63,.18);--cursor:#fff}
+html[data-theme="light"]{--bg:#fafaf7;--ink:#0c0c10;--dim:#5b5b66;--line:rgba(12,12,16,.2);--pop:#946a00;--pop-soft:rgba(148,106,0,.18);--panel:#edece6;--cursor:#0c0c10;color-scheme:light}
+body{transition:background-color .3s,color .3s}
+.cursor-dot{background:var(--cursor)}
+.tank [fill="#f3f1ff"],.missile [fill="#f3f1ff"]{fill:var(--ink)}
+.tank [fill="#000"]{fill:var(--bg)}
+.tank [fill="#ffd23f"],.missile [fill="#ffd23f"]{fill:var(--pop)}
+.theme-toggle{all:unset;box-sizing:border-box;cursor:pointer;margin-left:1.6rem;display:inline-flex;vertical-align:middle;width:52px;height:28px;border-radius:14px;border:1px solid var(--line);background:var(--panel);padding:2px}
+.theme-toggle:focus-visible{outline:3px solid var(--pop);outline-offset:3px}
+.tt-knob{width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;transform:translateX(24px);transition:transform .25s}
+html[data-theme="light"] .tt-knob{transform:none}
+.tt-knob svg{grid-area:1/1}
+.tt-sun{display:none}
+html[data-theme="light"] .tt-sun{display:block}
+html[data-theme="light"] .tt-moon{display:none}
+@media (max-width:480px){nav a,.theme-toggle{margin-left:.9rem}}
